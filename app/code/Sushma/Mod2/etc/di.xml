@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+      <type name="Magento\Catalog\Model\Product">
+          <plugin name="sushma_mod2_product_list_plugin" type="Sushma\Mod2\Plugin\ProductListPlugin" />
+      </type>
+      <type name="Magento\Theme\Block\Html\Header">
+        <plugin name="sushma_mod2_html_header_plugin" type="Sushma\Mod2\Plugin\Html\HeaderPlugin"/>
+      </type>
+      <type name="Magento\Theme\Block\Html\Footer">
+        <plugin name="sushma_mod2_footer_plugin" type="Sushma\Mod2\Plugin\Html\FooterPlugin"/>
+      </type>
+      <!-- <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="sushma_mod2_breacrumbs_plugin" type="Sushma\Mod2\Plugin\Html\BreadCrumpPlugin"/>
+      </type> -->
+      <type name="Magento\Theme\Block\Html\Breadcrumbs">
+        <plugin name="sushma_mod2_breadcrumbs_plugin" type="Sushma\Mod2\Plugin\BreadCrumbsPlugin"/>
+      </type>
+
+      <preference for="Psr\Log\LoggerInterface" type="Magento\Framework\Logger\Monolog"/>
+
+  </config>

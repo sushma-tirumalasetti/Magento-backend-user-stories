@@ -15,6 +15,6 @@ class CustomForm extends Template{
 
    public function getFormActionUrl()
    {
-       return $this->_urlBuilder->getUrl('userstory8/index/index');
+       return $this->_urlBuilder->getUrl('userstory8/index/SaveController');
    }
 }

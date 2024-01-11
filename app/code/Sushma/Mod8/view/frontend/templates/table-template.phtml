@@ -6,11 +6,20 @@
         <th>Email Id</th>
     </tr> -->
     <?php
-        foreach ($block->getEmployeeDetails() as $employee) {
+        $employees =  $block->getEmployeeDetails()->toArray();
+        usort($employees, function($a, $b) {
+            return strcmp($a->getEntityId(), $b->getEntityId());
+        });
+        // usort($employees, function($a, $b) {
+        //     return strcmp($a->getEntityId(), $b->getEntityId());
+        // });
+        foreach ($employees as $employee) {
         // Display the employee data...
-            echo $employee->getFirstName()."\t";
-            echo $employee->getLastName()."\t";
-            echo $employee->getEmailId()."<br/>";
+            echo $employee->getFirstName()."\t\t";
+            echo $employee->getLastName()."\t\t";
+            echo $employee->getEmailId()."\t\t";
+            echo $employee->getAddress()."\t\t";
+            echo $employee->getPhoneNumber()."<br/>";
         }
     ?>
 <!-- </table> -->

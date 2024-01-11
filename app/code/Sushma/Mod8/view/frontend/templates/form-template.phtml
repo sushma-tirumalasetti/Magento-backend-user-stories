@@ -1,11 +1,30 @@
-<form action="<?php echo $block->getFormActionUrl('sushma/index/index') ?>" method="POST">
+<form id="my-form" action="<?php echo $block->getUrl('userstory8/index/savecontroller') ?>" method="POST" data-mage-init='{"validation": {"rules"}}' >
     <label for="employee_id">Employee Id</label>
-    <input type="text" name="employee_id" id="employee_id"/>
+    <input type="text" name="employee_id" id="employee_id" />
+
     <label for="firstName">First Name</label>
-    <input id="firstName" type="text" name="first_name"/>
+    <input id="firstName" type="text" name="first_name" data-validate="{'lengthLessThan':30, 'alpha':true}"/>
+
     <label for="lastName">Last Name</label>
-    <input type="text" name="last_name" id="lastName"/>
+    <input type="text" name="last_name" id="lastName" data-validate="{'lengthLessThan':30, 'alpha':true}"/>
+
     <label for="email_id">Email Id</label>
-    <input type="email" name="email_id" id="email_id"/>
-     <button type="submit">Submit</button>
+    <input type="email" name="email_id" id="email_id" data-validate="{'validate-email':true}"/>
+
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address"/>
+    
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" number="true" name="phone_number" id="phoneNumber" data-validate="{'numericLength':10}"/>
+
+    <button type="submit">Submit</button>
 </form>
+
+
+<!-- <script type="text/x-magento-init">
+    {
+        "#my-form": {
+            "validation": {}
+        }
+    }
+</script> -->
