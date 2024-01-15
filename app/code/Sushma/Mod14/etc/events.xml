@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <observer name="order_event_listing" instance="Sushma\Mod14\Observer\ProductThresholdObserver"/>
+    </event>
+    <event name="product_threshold_check">
+        <observer name="custom_product_threshold_check" instance="Sushma\Mod14\Observer\AdminNotification"/>
+    </event>
+</config>
