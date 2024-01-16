@@ -1,0 +1,12 @@
+{
+    "customer_group_table_orders": {
+        "column": {
+            "id": true,
+            "customer_group_id": true,
+            "amount": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

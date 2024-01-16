@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+<table name="customer_group_table_orders" resource="default" engine="innodb" comment="The table is used to collect the customer group details details">
+    <column xsi:type="int" name="id" identity="true" unsigned="true" nullable="false"/>
+    <column xsi:type="varchar" nullable="false" length="50" name='customer_group_id' comment="Customer group id"/>
+    <column xsi:type="float" name="amount" nullable="false" comment="amount spend on the order"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+        <column name="id"/>
+        <column name="customer_group_id"/>
+    </constraint>
+</table>
+</schema>   
