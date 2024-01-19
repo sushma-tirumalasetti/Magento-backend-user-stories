@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mod16" translate="label" sortOrder="10">
+            <label>Mod16</label>
+        </tab>
+        <section id="general" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>General Settings</label>
+            <tab>mod16</tab>
+            <resource>Vendor_Mod16::config_mod16</resource>
+            <group id="color_picker" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Color Picker</label>
+                <field id="selected_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Color</label>
+                    <frontend_model>Sushma\Mod16\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <!-- <field id="selected_color" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Color</label>
+                    <comment>This will be the selected color for the page.</comment>
+                </field> -->
+            </group>
+        </section>
+    </system>
+</config>
+
+
+<!-- <?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+      <tab id="mod16" translate="label" sortOrder="100">
+          <label>MOD16</label>
+      </tab>
+      <section id="color_picker_section" translate="label" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Color Picker</label>
+        <tab>mod16</tab>
+        <resource>Custom_Config::config_general</resource>
+
+        <resource>Custom_Config::config_general</resource>
+        <group id="color_section_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Custom Con</label>
+        </group>
+      </section>
+  </system>
+</config> -->
