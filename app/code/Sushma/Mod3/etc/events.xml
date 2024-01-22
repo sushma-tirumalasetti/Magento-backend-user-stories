@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <!-- <event name="catalog_controller_product_view">
+    <event name="catalog_controller_product_view">
         <observer name="sushma_mod3_productpageobserver" instance="Sushma\Mod3\Observer\ProductPageObserver"/>
-    </event> -->
+    </event>
 
-   <event name="controller_action_postdispatch">
+   <!-- <event name="controller_action_postdispatch">
        <observer name="sushma_mod3_pageReloadObserver" instance="Sushma\Mod3\Observer\PageReloadObserver"/>
-   </event>
+   </event> -->
    <!-- <event name="catalog_controller_product_view">
        <observer name="sushma_mod3_log_product_details" instance="Sushma\Mod3\Observer\LogProductDetails" />
    </event> -->

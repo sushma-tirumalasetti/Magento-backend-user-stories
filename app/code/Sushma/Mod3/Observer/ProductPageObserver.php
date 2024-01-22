@@ -13,10 +13,14 @@ class ProductPageObserver implements ObserverInterface{
     public function execute(Observer $observer){
         $product = $observer->getEvent()->getProduct();
         $productName = $product->getName();
-        $this->logger->info("Product name---:",[$productName]);
+        $productSku = $product->getSku();
+        $productPrice = $product->getPrice();
+        $quantity=$product->getSalableQuantity();
+
+        $this->logger->info("Product name---:",[$productName,$productSku,$productPrice,$quantity]);
         // $this->logger->info([
         //     'name' => $product->getName(),
-        //     'sku' => $product->getSku(),
+        //     'sku' => $product->getSku()
         //     // Add other product attributes as needed
         // ]);
 
